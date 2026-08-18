@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODIZO Mini Lead Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>ODIZO Mini Lead Tracker</h1>
+            <p>Manage and track potential clients</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Lead Form -->
+        <section class="card">
+            <div class="section-title">
+                <h2 id="formTitle">Add New Lead</h2>
+                <p>Enter client information below</p>
+            </div>
+
+            <form id="leadForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="clientName">Client Name</label>
+                        <input type="text" id="clientName" placeholder="Enter client name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" placeholder="Enter company name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Required</label>
+                        <select id="service" required>
+                            <option value="">Select Service</option>
+                            <option value="Website">Website</option>
+                            <option value="Web Application">Web Application</option>
+                            <option value="Mobile Application">Mobile Application</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="SEO">SEO</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget (₹)</label>
+                        <input type="number" id="budget" placeholder="Enter budget" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status" required>
+                            <option value="New">New</option>
+                            <option value="Contacted">Contacted</option>
+                            <option value="Interested">Interested</option>
+                            <option value="Converted">Converted</option>
+                            <option value="Lost">Lost</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary" id="submitButton">
+                        Add Lead
+                    </button>
+
+                    <button type="button" class="btn btn-secondary hidden" id="cancelButton">
+                        Cancel Edit
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+
+        <!-- Search and Filters -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>Lead Management</h2>
+                <p>Search and filter your leads</p>
+            </div>
+
+            <div class="filters">
+
+                <div class="filter-group search-group">
+                    <label for="searchInput">Search Client</label>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search by client name..."
+                    >
+                </div>
+
+                <div class="filter-group">
+                    <label for="budgetFilter">Budget Filter</label>
+                    <select id="budgetFilter">
+                        <option value="all">All Budgets</option>
+                        <option value="greater20000">Greater than ₹20,000</option>
+                        <option value="less50000">Less than ₹50,000</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="statusFilter">Status Filter</label>
+                    <select id="statusFilter">
+                        <option value="All">All</option>
+                        <option value="New">New</option>
+                        <option value="Contacted">Contacted</option>
+                        <option value="Interested">Interested</option>
+                        <option value="Converted">Converted</option>
+                        <option value="Lost">Lost</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Lead Table -->
+        <section class="card">
+
+            <div class="table-header">
+                <div>
+                    <h2>All Leads</h2>
+                    <p id="leadCount">Total Leads: 0</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Company</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Service</th>
+                            <th>Budget</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="leadTableBody">
+                        <!-- JavaScript will add leads here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div id="noLeadsMessage" class="no-leads hidden">
+                No leads found.
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>ODIZO Mini Lead Tracker &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
