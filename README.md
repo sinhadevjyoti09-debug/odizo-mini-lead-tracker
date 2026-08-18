@@ -1,33 +1,109 @@
 # ODIZO Mini Lead Tracker
 
-A simple Lead Management System for managing potential clients.
+## Project Purpose
 
-## Technologies
+ODIZO Mini Lead Tracker is a simple Lead Management System developed as part of the ODIZO Internship Project Assignment.
 
-* HTML
-* CSS
-* JavaScript
-* MongoDB
-* Git & GitHub
+The project helps users manage potential clients by allowing them to add, view, search, filter, edit, and delete leads.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- MongoDB
+- Git
+- GitHub
 
 ## Features
 
-* Add leads
-* View leads
-* Search by client name
-* Filter by budget and status
-* Edit and delete leads
-* MongoDB practice queries
+### 1. Add Lead
 
-## Project Structure
+Users can add a new lead using the form.
 
-```text
-index.html
-style.css
-script.js
-README.md
-```
+The form contains:
 
-## Purpose
+- Client Name
+- Company Name
+- Email
+- Phone
+- Service Required
+- Budget
+- Status
 
-This project was developed as part of the ODIZO internship assignment to practice frontend development, JavaScript concepts, MongoDB queries, and Git/GitHub.
+### 2. Display Leads
+
+All leads are displayed in a professional table.
+
+The table contains:
+
+- Client Name
+- Company
+- Email
+- Phone
+- Service
+- Budget
+- Status
+- Actions
+
+### 3. Search
+
+Users can search for a client by name.
+
+Example:
+
+Searching for `Rahul` displays leads containing Rahul in the client name.
+
+### 4. Budget Filter
+
+Users can filter leads based on their budget.
+
+Available filters:
+
+- All Budgets
+- Greater than ₹20,000
+- Less than ₹50,000
+
+### 5. Status Filter
+
+Users can filter leads by their current status.
+
+Available statuses:
+
+- All
+- New
+- Contacted
+- Interested
+- Converted
+- Lost
+
+### 6. Edit Lead
+
+Users can edit existing lead information and update the lead.
+
+### 7. Delete Lead
+
+Users can delete a lead from the displayed data.
+
+### 8. JavaScript Array and Objects
+
+The initial lead data is stored in a JavaScript array containing lead objects.
+
+Example:
+
+```javascript
+const leads = [
+    {
+        name: "Rahul Sharma",
+        company: "ABC Foods",
+        service: "Website",
+        budget: 25000,
+        status: "New"
+    }
+];
+Author
+
+Akash Kumar Mohanty
+
+ODIZO Internship Project
+git status

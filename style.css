@@ -1,74 +1,109 @@
+/* ================================
+   ODIZO MINI LEAD TRACKER
+   Modern CRM Dashboard Design
+================================ */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
-    color: #1f2937;
-    line-height: 1.5;
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --secondary: #7c3aed;
+    --background: #f5f7fb;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --success: #16a34a;
+    --warning: #d97706;
+    --danger: #dc2626;
+    --info: #2563eb;
 }
 
-/* Header */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+
+/* =================================
+   HEADER
+================================= */
 
 .header {
-    background-color: #111827;
+    background: linear-gradient(135deg, #111827, #312e81);
     color: white;
-    padding: 25px 40px;
+    padding: 28px 6%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .header h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .header p {
+    margin-top: 6px;
     color: #d1d5db;
-}
-
-
-/* Main Container */
-
-.container {
-    width: 95%;
-    max-width: 1400px;
-    margin: 30px auto;
-}
-
-
-/* Cards */
-
-.card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.section-title {
-    margin-bottom: 20px;
-}
-
-.section-title h2 {
-    font-size: 21px;
-    margin-bottom: 4px;
-}
-
-.section-title p {
-    color: #6b7280;
     font-size: 14px;
 }
 
 
-/* Form */
+/* =================================
+   MAIN CONTAINER
+================================= */
+
+.container {
+    width: 92%;
+    max-width: 1450px;
+    margin: 35px auto;
+}
+
+
+/* =================================
+   CARDS
+================================= */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(17, 24, 39, 0.05);
+}
+
+.section-title {
+    margin-bottom: 24px;
+}
+
+.section-title h2 {
+    font-size: 21px;
+    font-weight: 650;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =================================
+   FORM
+================================= */
 
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    gap: 20px;
 }
 
 .form-group {
@@ -78,87 +113,86 @@ body {
 
 .form-group label,
 .filter-group label {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
 }
 
 input,
 select {
     width: 100%;
-    padding: 11px 12px;
+    height: 44px;
+    padding: 0 13px;
     border: 1px solid #d1d5db;
-    border-radius: 6px;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #111827;
     font-size: 14px;
-    outline: none;
-    background-color: white;
+    transition: 0.2s ease;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+input:hover,
+select:hover {
+    border-color: #a5b4fc;
 }
 
 input:focus,
 select:focus {
-    border-color: #2563eb;
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
 }
+
+
+/* =================================
+   FORM BUTTONS
+================================= */
 
 .form-buttons {
-    margin-top: 20px;
     display: flex;
     gap: 10px;
+    margin-top: 25px;
 }
-
-
-/* Buttons */
 
 .btn {
     border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    cursor: pointer;
+    border-radius: 8px;
+    padding: 11px 20px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .btn-primary {
-    background-color: #2563eb;
+    background: var(--primary);
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #1d4ed8;
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 12px rgba(79, 70, 229, 0.25);
 }
 
 .btn-secondary {
-    background-color: #6b7280;
-    color: white;
+    background: #eef2f7;
+    color: #374151;
 }
 
 .btn-secondary:hover {
-    background-color: #4b5563;
-}
-
-.btn-edit {
-    background-color: #f59e0b;
-    color: white;
-}
-
-.btn-edit:hover {
-    background-color: #d97706;
-}
-
-.btn-delete {
-    background-color: #dc2626;
-    color: white;
-}
-
-.btn-delete:hover {
-    background-color: #b91c1c;
-}
-
-.hidden {
-    display: none;
+    background: #e5e7eb;
 }
 
 
-/* Filters */
+/* =================================
+   SEARCH & FILTERS
+================================= */
 
 .filters {
     display: grid;
@@ -172,11 +206,14 @@ select:focus {
 }
 
 
-/* Table */
+/* =================================
+   TABLE HEADER
+================================= */
 
 .table-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -185,76 +222,107 @@ select:focus {
 }
 
 .table-header p {
-    color: #6b7280;
-    font-size: 14px;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 4px;
 }
+
+
+/* =================================
+   TABLE
+================================= */
 
 .table-container {
     width: 100%;
     overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
 }
 
 table {
     width: 100%;
+    min-width: 1050px;
     border-collapse: collapse;
-    min-width: 1000px;
 }
 
 thead {
-    background-color: #111827;
-    color: white;
+    background: #f8fafc;
 }
 
-th,
-td {
-    padding: 13px 12px;
+th {
+    color: #4b5563;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    padding: 15px;
     text-align: left;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 15px;
     font-size: 14px;
+    border-bottom: 1px solid #f0f1f3;
+    color: #374151;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
 }
 
 tbody tr:hover {
-    background-color: #f9fafb;
+    background: #f8faff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
 }
 
 
-/* Status */
+/* =================================
+   STATUS BADGES
+================================= */
 
 .status {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 12px;
-    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 .status-new {
-    background-color: #dbeafe;
+    background: #dbeafe;
     color: #1d4ed8;
 }
 
 .status-contacted {
-    background-color: #fef3c7;
+    background: #fef3c7;
     color: #92400e;
 }
 
 .status-interested {
-    background-color: #ede9fe;
+    background: #ede9fe;
     color: #6d28d9;
 }
 
 .status-converted {
-    background-color: #dcfce7;
+    background: #dcfce7;
     color: #166534;
 }
 
 .status-lost {
-    background-color: #fee2e2;
+    background: #fee2e2;
     color: #991b1b;
 }
 
 
-/* Action Buttons */
+/* =================================
+   ACTION BUTTONS
+================================= */
 
 .actions {
     display: flex;
@@ -262,47 +330,98 @@ tbody tr:hover {
 }
 
 .actions button {
-    padding: 7px 10px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 6px;
+    padding: 7px 11px;
     font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-edit {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+.btn-edit:hover {
+    background: #ffedd5;
+}
+
+.btn-delete {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.btn-delete:hover {
+    background: #fee2e2;
 }
 
 
-/* No Leads */
+/* =================================
+   NO LEADS MESSAGE
+================================= */
 
 .no-leads {
     text-align: center;
-    padding: 25px;
-    color: #6b7280;
+    padding: 35px;
+    color: var(--muted);
+    font-size: 14px;
 }
 
 
-/* Footer */
+/* =================================
+   HIDDEN
+================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
 
 footer {
     text-align: center;
-    padding: 20px;
-    color: #6b7280;
+    padding: 25px;
+    color: #9ca3af;
     font-size: 13px;
 }
 
 
-/* Responsive Design */
+/* =================================
+   SCROLLBAR
+================================= */
 
-@media (max-width: 800px) {
+.table-container::-webkit-scrollbar {
+    height: 7px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
 
     .header {
-        padding: 20px;
-    }
-
-    .header h1 {
-        font-size: 23px;
+        padding: 25px;
     }
 
     .container {
-        width: 92%;
+        width: 94%;
+        margin: 25px auto;
     }
 
     .form-grid {
@@ -314,6 +433,511 @@ footer {
     }
 
     .card {
+        padding: 22px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .card {
         padding: 18px;
+        border-radius: 10px;
+    }
+
+    .section-title h2,
+    .table-header h2 {
+        font-size: 18px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}/* ================================
+   ODIZO MINI LEAD TRACKER
+   Modern CRM Dashboard Design
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --secondary: #7c3aed;
+    --background: #f5f7fb;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --success: #16a34a;
+    --warning: #d97706;
+    --danger: #dc2626;
+    --info: #2563eb;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.header {
+    background: linear-gradient(135deg, #111827, #312e81);
+    color: white;
+    padding: 28px 6%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    margin-top: 6px;
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+
+/* =================================
+   MAIN CONTAINER
+================================= */
+
+.container {
+    width: 92%;
+    max-width: 1450px;
+    margin: 35px auto;
+}
+
+
+/* =================================
+   CARDS
+================================= */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(17, 24, 39, 0.05);
+}
+
+.section-title {
+    margin-bottom: 24px;
+}
+
+.section-title h2 {
+    font-size: 21px;
+    font-weight: 650;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label,
+.filter-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 44px;
+    padding: 0 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+input:hover,
+select:hover {
+    border-color: #a5b4fc;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+/* =================================
+   FORM BUTTONS
+================================= */
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 12px rgba(79, 70, 229, 0.25);
+}
+
+.btn-secondary {
+    background: #eef2f7;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+}
+
+
+/* =================================
+   SEARCH & FILTERS
+================================= */
+
+.filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 18px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =================================
+   TABLE HEADER
+================================= */
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: 21px;
+}
+
+.table-header p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+/* =================================
+   TABLE
+================================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    color: #4b5563;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 15px;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f1f3;
+    color: #374151;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8faff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =================================
+   STATUS BADGES
+================================= */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-new {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-contacted {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-interested {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.status-converted {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-lost {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* =================================
+   ACTION BUTTONS
+================================= */
+
+.actions {
+    display: flex;
+    gap: 7px;
+}
+
+.actions button {
+    border: none;
+    border-radius: 6px;
+    padding: 7px 11px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-edit {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+.btn-edit:hover {
+    background: #ffedd5;
+}
+
+.btn-delete {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.btn-delete:hover {
+    background: #fee2e2;
+}
+
+
+/* =================================
+   NO LEADS MESSAGE
+================================= */
+
+.no-leads {
+    text-align: center;
+    padding: 35px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =================================
+   HIDDEN
+================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+
+/* =================================
+   SCROLLBAR
+================================= */
+
+.table-container::-webkit-scrollbar {
+    height: 7px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 25px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .card {
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    .section-title h2,
+    .table-header h2 {
+        font-size: 18px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
     }
 }
