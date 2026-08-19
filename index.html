@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="ODIZO Mini Lead Tracker for managing prospective clients.">
+	<title>ODIZO | Mini Lead Tracker</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="app-shell">
+		<header class="site-header">
+			<a class="brand" href="index.html" aria-label="ODIZO Mini Lead Tracker home"><span class="brand-mark">O</span><span><strong>ODIZO</strong><small>MINI LEAD TRACKER</small></span></a>
+			<div class="header-meta"><span class="pulse"></span><span>Workspace active</span></div>
+		</header>
+		<main>
+			<section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">Sales workspace / 2024</p><h1 id="page-title">Turn every conversation<br><em>into momentum.</em></h1><p class="intro-copy">A clear view of your pipeline, from first hello to signed deal.</p></div><div class="intro-stats" aria-label="Lead summary"><div><strong id="total-leads">0</strong><span>Total leads</span></div><div><strong id="active-leads">0</strong><span>Active pipeline</span></div></div></section>
+			<section class="form-card" aria-labelledby="form-title"><div class="section-heading"><div><span class="section-number">01</span><h2 id="form-title">Add new lead</h2></div><p>Capture a promising connection.</p></div>
+				<form id="lead-form">
+					<div class="field"><label for="client-name">Client name</label><input id="client-name" name="name" type="text" placeholder="e.g. Rahul Sharma" required></div><div class="field"><label for="company-name">Company name</label><input id="company-name" name="company" type="text" placeholder="e.g. Nova Labs" required></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="hello@company.com" required></div><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" pattern="[0-9+() -]{7,}" placeholder="+91 98765 43210" required></div><div class="field"><label for="service">Service required</label><input id="service" name="service" type="text" placeholder="e.g. Brand strategy" required></div><div class="field"><label for="budget">Budget <span>(INR)</span></label><input id="budget" name="budget" type="number" min="1" step="500" placeholder="25000" required></div><div class="field"><label for="status">Lead status</label><select id="status" name="status" required><option value="">Select status</option><option>New</option><option>Contacted</option><option>Interested</option><option>Converted</option><option>Lost</option></select></div><div class="form-actions"><button class="primary-button" id="submit-button" type="submit"><span>＋</span> Add lead</button><button class="text-button hidden" id="cancel-edit" type="button">Cancel edit</button></div>
+				</form>
+			</section>
+			<section class="leads-section" aria-labelledby="leads-title"><div class="section-heading leads-heading"><div><span class="section-number">02</span><h2 id="leads-title">Your leads</h2></div><p id="results-count">Showing all leads</p></div><div class="toolbar"><label class="search-box" for="search-input"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search by client name..." aria-label="Search by client name"></label><label class="select-box" for="budget-filter"><span>Budget</span><select id="budget-filter"><option value="all">All budgets</option><option value="above">Above ₹20,000</option><option value="below">Below ₹50,000</option></select></label><label class="select-box" for="status-filter"><span>Status</span><select id="status-filter"><option value="all">All statuses</option><option>New</option><option>Contacted</option><option>Interested</option><option>Converted</option><option>Lost</option></select></label></div><div class="table-wrap"><table><thead><tr><th>Client</th><th>Company</th><th>Email</th><th>Phone</th><th>Service</th><th>Budget</th><th>Status</th><th>Actions</th></tr></thead><tbody id="leads-table-body"></tbody></table><div class="empty-state hidden" id="empty-state"><span>◎</span><h3>No leads found</h3><p>Try changing your search or filters.</p></div></div></section>
+		</main>
+		<footer><span>ODIZO</span><span>Lead management, made clear.</span></footer>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
