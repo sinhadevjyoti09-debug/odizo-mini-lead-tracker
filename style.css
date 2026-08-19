@@ -11,3 +11,25 @@ button, input, select { font: inherit; } button { cursor: pointer; }
 footer { display: flex; justify-content: space-between; padding: 20px 0 28px; color: var(--muted); border-top: 1px solid var(--line); font-size: 11px; } footer span:first-child { color: var(--ink); font-weight: 700; letter-spacing: 1px; }
 @media (max-width: 850px) { .app-shell { padding: 0 5vw; }.intro { padding: 52px 0 44px; }.intro-stats { gap: 20px; }.form-card { padding: 25px 22px; } #lead-form { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .site-header { height: 76px; }.header-meta { display: none; }.intro { display: block; padding: 43px 0 38px; }.intro h1 { font-size: 42px; }.intro-stats { margin-top: 35px; }.intro-stats strong { font-size: 30px; }.section-heading { align-items: start; gap: 15px; }.section-heading p { text-align: right; }.form-card { padding: 22px 17px; } #lead-form { grid-template-columns: 1fr; gap: 17px; }.form-actions { margin-top: 4px; }.toolbar { display: grid; grid-template-columns: 1fr 1fr; }.search-box { grid-column: 1 / -1; }.select-box { justify-content: space-between; padding-left: 10px; }.select-box select { max-width: 105px; }.leads-section { padding: 52px 0 62px; } footer { display: block; line-height: 2; } footer span { display: block; } }
+
+/* Readability adjustments */
+:root { --ink: #182019; --muted: #566158; --line: #cbd5ca; --paper: #f3f6ef; --green: #205c40; --red: #a64343; }
+.brand small { font-size: 9px; }
+.header-meta { font-size: 13px; }
+.eyebrow, .section-number { font-size: 12px; }
+.intro-copy { font-size: 16px; }
+.intro-stats span { font-size: 13px; }
+.section-heading p { font-size: 14px; }
+.field label { color: #3f4b42; font-size: 12px; }
+.field label span { color: #68756b; }
+.field input, .field select { font-size: 14px; }
+.field input::placeholder { color: #89958b; }
+.primary-button, .text-button { font-size: 13px; }
+.search-box input { font-size: 14px; }
+.select-box span { font-size: 12px; }
+.select-box select { font-size: 13px; }
+.table-wrap th { color: #667168; font-size: 11px; }
+.table-wrap td { font-size: 13px; }
+.status-badge { font-size: 11px; }
+.action-button { font-size: 12px; }
+footer { font-size: 12px; }
