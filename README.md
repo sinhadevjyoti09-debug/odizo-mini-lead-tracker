@@ -48,6 +48,7 @@ git add style.css script.js
  git commit -m "Add search and filter functionality"
 git add README.md mongo-queries.js
 git commit -m "Add MongoDB practice queries and documentation"
+git branch -M main
 git remote add origin YOUR_GITHUB_REPOSITORY_URL
 git push -u origin main
 ```
