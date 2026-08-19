@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odizo mini lead tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+    <div class="container">
+
+        <h1>ODIZO Mini Lead Tracker</h1>
+        <p class="subtitle">Manage your potential clients</p>
+
+    
+        <div class="form-box">
+
+            <h2>Add Lead</h2>
+
+            <form id="leadForm">
+
+                <input type="text" id="name" placeholder="Client Name" required>
+
+                <input type="text" id="company" placeholder="Company Name" required>
+
+                <input type="email" id="email" placeholder="Email" required>
+
+                <input type="text" id="phone" placeholder="Phone" required>
+
+                <input type="text" id="service" placeholder="Service Required" required>
+
+                <input type="number" id="budget" placeholder="Budget" required>
+
+                <select id="status" required>
+                    <option value="New">New</option>
+                    <option value="Contacted">Contacted</option>
+                    <option value="Interested">Interested</option>
+                    <option value="Converted">Converted</option>
+                    <option value="Lost">Lost</option>
+                </select>
+
+                <button type="submit" id="submitButton">Add Lead</button>
+
+            </form>
+
+        </div>
+
+        <div class="filters">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search client name..."
+            >
+
+            <select id="budgetFilter">
+                <option value="all">All Budgets</option>
+                <option value="greater">Budget > ₹20,000</option>
+                <option value="less">Budget < ₹50,000</option>
+            </select>
+
+            <select id="statusFilter">
+                <option value="All">All Status</option>
+                <option value="New">New</option>
+                <option value="Contacted">Contacted</option>
+                <option value="Interested">Interested</option>
+                <option value="Converted">Converted</option>
+                <option value="Lost">Lost</option>
+            </select>
+
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <th>
+                    <tr>
+                        <th>Client</th>
+                        <th>Company</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Service</th>
+                        <th>Budget</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </th>
+
+                <tbody id="leadTable">
+                    
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+</body>
+</html>
