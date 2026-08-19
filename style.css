@@ -12,7 +12,6 @@ footer { display: flex; justify-content: space-between; padding: 20px 0 28px; co
 @media (max-width: 850px) { .app-shell { padding: 0 5vw; }.intro { padding: 52px 0 44px; }.intro-stats { gap: 20px; }.form-card { padding: 25px 22px; } #lead-form { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .site-header { height: 76px; }.header-meta { display: none; }.intro { display: block; padding: 43px 0 38px; }.intro h1 { font-size: 42px; }.intro-stats { margin-top: 35px; }.intro-stats strong { font-size: 30px; }.section-heading { align-items: start; gap: 15px; }.section-heading p { text-align: right; }.form-card { padding: 22px 17px; } #lead-form { grid-template-columns: 1fr; gap: 17px; }.form-actions { margin-top: 4px; }.toolbar { display: grid; grid-template-columns: 1fr 1fr; }.search-box { grid-column: 1 / -1; }.select-box { justify-content: space-between; padding-left: 10px; }.select-box select { max-width: 105px; }.leads-section { padding: 52px 0 62px; } footer { display: block; line-height: 2; } footer span { display: block; } }
 
-/* Readability adjustments */
 :root { --ink: #182019; --muted: #566158; --line: #cbd5ca; --paper: #f3f6ef; --green: #205c40; --red: #a64343; }
 .brand small { font-size: 9px; }
 .header-meta { font-size: 13px; }
